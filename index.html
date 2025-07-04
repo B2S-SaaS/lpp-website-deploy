@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        h1, h2, h3, .diagnosis-card p { font-family: 'Noto Serif JP', serif; }
+        #to-top-btn { transition: opacity 0.3s, visibility 0.3s; }
+        .result-section video {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* 8px */
+            background-color: #000;
+        }
+    </style>
+    <title>3分でわかる！あなたにピッタリの相続準備診断｜株式会社ライフプラン・パートナーズ</title>
+</head>
+<body>
+    <div class="container mx-auto max-w-4xl p-8">
+        <!-- 診断セクション -->
+        <section id="diagnosis" class="text-center py-16">
+            <h1 class="text-4xl font-bold text-gray-800">3分でわかる！<br>あなたにピッタリの相続準備診断</h1>
+            <h2 class="mt-4 text-xl text-gray-600">現在のあなたの状況に、最も近いものはどれですか？</h2>
+            
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- 診断カード A -->
+                <div class="diagnosis-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" data-target="#result-story">
+                    <div class="text-3xl font-bold text-blue-500">A</div>
+                    <p class="mt-4 font-semibold text-lg text-gray-700">相続と言われても、まだ実感が湧かない。<br>まずは全体像を知りたい。</p>
+                </div>
+                <!-- 診断カード B -->
+                <div class="diagnosis-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" data-target="#result-pasona">
+                    <div class="text-3xl font-bold text-red-500">B</div>
+                    <p class="mt-4 font-semibold text-lg text-gray-700">何かしなきゃ、という漠然とした不安がある。<br>何から手をつければ良いか知りたい。</p>
+                </div>
+                <!-- 診断カード C -->
+                <div class="diagnosis-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" data-target="#result-solution">
+                    <div class="text-3xl font-bold text-green-500">C</div>
+                    <p class="mt-4 font-semibold text-lg text-gray-700">不動産や税金など、<br>具体的な疑問や心配事がある。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 動画再生セクションコンテナ -->
+        <div id="results-container">
+            <!-- 結果セクション A (ストーリーテリング) -->
+            <section id="result-story" class="result-section hidden mt-16 p-8 bg-white rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800">「まだ先のこと」と思っていませんか？</h3>
+                <p class="text-lg text-gray-600 mt-1">～ある家族の物語から学ぶ、後悔しないための相続準備～</p>
+                <div class="mt-6 aspect-video bg-black rounded-lg">
+                    <video controls src="./lpp-story-final.mp4"></video>
+                </div>
+                <div class="cta-area mt-8 p-6 bg-gray-100 rounded-md text-center">
+                    <p class="text-gray-700">より詳しいご説明やご相談は、お気軽にお電話ください。</p>
+                    <p class="text-3xl font-bold text-blue-600 mt-2">0120-XXX-XXX</p>
+                </div>
+            </section>
+
+            <!-- 結果セクション B (新PASONA) -->
+            <section id="result-pasona" class="result-section hidden mt-16 p-8 bg-white rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800">なぜか不安…どうすれば？</h3>
+                <p class="text-lg text-gray-600 mt-1">～漠然とした悩みを解決する、具体的なステップ～</p>
+                <div class="mt-6 aspect-video bg-black rounded-lg">
+                    <video controls src="./lpp-pasona-final.mp4"></video>
+                </div>
+                <div class="cta-area mt-8 p-6 bg-gray-100 rounded-md text-center">
+                    <p class="text-gray-700">より詳しいご説明やご相談は、お気軽にお電話ください。</p>
+                    <p class="text-3xl font-bold text-blue-600 mt-2">0120-XXX-XXX</p>
+                </div>
+            </section>
+
+            <!-- 結果セクション C (問題解決) -->
+            <section id="result-solution" class="result-section hidden mt-16 p-8 bg-white rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800">具体的な疑問があります</h3>
+                <p class="text-lg text-gray-600 mt-1">～専門家が答える、相続Q&A～</p>
+                <div class="mt-6 aspect-video bg-black rounded-lg">
+                    <video controls src="./lpp-solution-final.mp4"></video>
+                </div>
+                <div class="cta-area mt-8 p-6 bg-gray-100 rounded-md text-center">
+                    <p class="text-gray-700">より詳しいご説明やご相談は、お気軽にお電話ください。</p>
+                    <p class="text-3xl font-bold text-blue-600 mt-2">0120-XXX-XXX</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="to-top-btn" class="hidden fixed bottom-8 right-8 bg-gray-800 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const diagnosisCards = document.querySelectorAll('.diagnosis-card');
+            const resultSections = document.querySelectorAll('.result-section');
+            const toTopBtn = document.getElementById('to-top-btn');
+
+            diagnosisCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const targetId = this.dataset.target;
+                    const targetElement = document.querySelector(targetId);
+                    
+                    // すべての動画を一時停止し、再生位置をリセット
+                    resultSections.forEach(section => {
+                        section.classList.add('hidden');
+                        const video = section.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                    });
+
+                    // クリックされたカードに対応するセクションを表示
+                    if (targetElement) {
+                        targetElement.classList.remove('hidden');
+                        // 該当セクションへスムーズにスクロール
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // スクロールで「トップへ戻る」ボタンの表示/非表示を切り替え
+            window.addEventListener('scroll', () => {
+                toTopBtn.classList.toggle('hidden', window.scrollY < 200);
+            });
+
+            // 「トップへ戻る」ボタンのクリックイベント
+            toTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

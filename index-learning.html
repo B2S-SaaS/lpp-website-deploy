@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f9fafb; }
+        h1, h2, h3, h4 { font-family: 'Noto Serif JP', serif; }
+        .slide { display: none; }
+        .slide.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        video { width: 100%; height: auto; border-radius: 0.5rem; background-color: #000; }
+    </style>
+    <title>納品動画コンテンツ 活用ガイド｜株式会社ライフプラン・パートナーズ</title>
+</head>
+<body class="text-gray-800">
+    <!-- ヘッダー (シンプル化) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto max-w-6xl p-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">【株式会社ライフプラン・パートナーズ様 専用】</h1>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container mx-auto max-w-5xl p-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">納品動画コンテンツ 活用ガイド</h2>
+            <p class="mt-4 text-lg text-gray-600">この度は、弊社サービスをご利用いただき誠にありがとうございます。<br>納品した動画をお客様のビジネスで120%活用いただくための、取扱説明書です。</p>
+        </div>
+
+        <!-- ★★★ オリエンテーション音声セクション (新規追加・移設) ★★★ -->
+        <div class="mb-16 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg shadow">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <!-- ヘッドホンアイコン -->
+                    <svg class="h-10 w-10 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                    </svg>
+                </div>
+                <div class="ml-4 flex-grow">
+                    <p class="font-bold text-lg text-blue-800">まずは、この活用ガイドの使い方を音声でご案内します。</p>
+                    <audio controls src="./lpp-orientation-final.mp3" class="w-full mt-2"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 学習ユニット (変更なし) -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+            <!-- (中身は変更なし) -->
+            <h3 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6">【処方A】ストーリーテリング動画 活用ガイド</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <video controls src="./lpp-story-final.mp4"></video>
+                <div class="slideshow-container border p-4 rounded-md bg-gray-50">
+                    <div class="slides">
+                        <div class="slide active"><h4 class="font-bold text-lg">【1/3】この動画を処方するお客様</h4><p class="mt-2 text-sm"><b>「相続への関心が薄い」「まずは全体像を知りたい」</b>というお客様へ。この動画は、相続を「自分ごと」として捉えてもらうための第一歩です。難しい話は抜きにして、まずは物語として楽しんでいただくことを目指します。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【2/3】この動画の強み</h4><p class="mt-2 text-sm"><b>感情移入しやすい「物語形式」</b>。鈴木家という架空の家族のストーリーを通して、視聴者は相続のプロセスと、準備の重要性を自然に理解することができます。専門用語を極力排し、共感を呼ぶ構成になっています。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【3/3】お客様へのトーク例</h4><p class="mt-2 text-sm"><b>「相続と言っても、何から考えれば良いか分かりにくいですよね。まずは、あるご家族がどのような準備をされたのか、こちらの物語をご覧になって、全体のイメージを掴んでみませんか？」</b></p></div>
+                    </div>
+                    <div class="controls mt-4 flex justify-between items-center"><button class="prev-btn bg-gray-300 py-1 px-3 rounded hover:bg-gray-400 disabled:opacity-50" disabled>前へ</button><span class="slide-counter text-sm font-semibold">1 / 3</span><button class="next-btn bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">次へ</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+             <!-- (中身は変更なし) -->
+            <h3 class="text-2xl font-bold border-b-2 border-red-500 pb-2 mb-6">【処方B】新PASONA型動画 活用ガイド</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <video controls src="./lpp-pasona-final.mp4"></video>
+                <div class="slideshow-container border p-4 rounded-md bg-gray-50">
+                    <div class="slides">
+                        <div class="slide active"><h4 class="font-bold text-lg">【1/3】この動画を処方するお客様</h4><p class="mt-2 text-sm"><b>「何から手をつければ…」「漠然とした不安がある」</b>というお客様へ。お客様が抱える見えない不安を言語化し、「今、行動すべき理由」を明確に提示するための動画です。課題解決へのモチベーションを高めます。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【2/3】この動画の強み</h4><p class="mt-2 text-sm"><b>不安に寄り添い、行動を促す「新PASONAの法則」</b>。お客様の悩みに共感を示した上で（Problem, Affinity）、具体的な解決策と提案（Solution, Offer）を行い、最終的な行動（Action）へと力強く背中を押す、心理学に基づいた構成です。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【3/3】お客様へのトーク例</h4><p class="mt-2 text-sm"><b>「多くの方が、〇〇様と同じように『何から始めれば…』というお悩みを抱えていらっしゃいます。その漠然とした不安の正体と、今すぐできる第一歩を、この動画で具体的に解説しております。」</b></p></div>
+                    </div>
+                    <div class="controls mt-4 flex justify-between items-center"><button class="prev-btn bg-gray-300 py-1 px-3 rounded hover:bg-gray-400 disabled:opacity-50" disabled>前へ</button><span class="slide-counter text-sm font-semibold">1 / 3</span><button class="next-btn bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">次へ</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+             <!-- (中身は変更なし) -->
+            <h3 class="text-2xl font-bold border-b-2 border-green-500 pb-2 mb-6">【処方C】問題解決型動画 活用ガイド</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <video controls src="./lpp-solution-final.mp4"></video>
+                <div class="slideshow-container border p-4 rounded-md bg-gray-50">
+                    <div class="slides">
+                        <div class="slide active"><h4 class="font-bold text-lg">【1/3】この動画を処方するお客様</h4><p class="mt-2 text-sm"><b>「不動産は？」「税金は？」</b>など、具体的な疑問があるお客様へ。ある程度知識があり、具体的な疑問点をお持ちのお客様に、専門家の見地からデータとロジックで回答し、納得と信頼を得るための動画です。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【2/3】この動画の強み</h4><p class="mt-2 text-sm"><b>データとロジックによる「専門家としての信頼性」</b>。「なぜ問題が起きるのか？」「生命保険がなぜ有効なのか？」を、データや「３つの力」といったフレームワークを用いて、論理的に分かりやすく解説。専門家としての信頼性を高めます。</p></div>
+                        <div class="slide"><h4 class="font-bold text-lg">【3/3】お客様へのトーク例</h4><p class="mt-2 text-sm"><b>「先ほどご質問いただいた〇〇の点について、データを用いてより詳しく解説した動画がございます。こちらをご覧いただくと、さらに理解が深まるかと存じます。」</b></p></div>
+                    </div>
+                    <div class="controls mt-4 flex justify-between items-center"><button class="prev-btn bg-gray-300 py-1 px-3 rounded hover:bg-gray-400 disabled:opacity-50" disabled>前へ</button><span class="slide-counter text-sm font-semibold">1 / 3</span><button class="next-btn bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">次へ</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ページトップへ戻るボタン (変更なし) -->
+    <button id="to-top-btn" class="hidden fixed bottom-8 right-8 bg-gray-800 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-700 transition-opacity">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // (JavaScriptは変更なしで動作します)
+            const toTopBtn = document.getElementById('to-top-btn');
+            if (toTopBtn) {
+                window.addEventListener('scroll', () => { toTopBtn.classList.toggle('hidden', window.scrollY < 200); });
+                toTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            }
+            const slideshows = document.querySelectorAll('.slideshow-container');
+            slideshows.forEach(slideshow => {
+                let currentSlideIndex = 0;
+                const slides = slideshow.querySelectorAll('.slide');
+                const totalSlides = slides.length;
+                const prevBtn = slideshow.querySelector('.prev-btn');
+                const nextBtn = slideshow.querySelector('.next-btn');
+                const counter = slideshow.querySelector('.slide-counter');
+
+                function updateSlideshow() {
+                    slides.forEach((slide, index) => {
+                        slide.classList.toggle('active', index === currentSlideIndex);
+                    });
+                    if (counter) {
+                        counter.textContent = `${currentSlideIndex + 1} / ${totalSlides}`;
+                    }
+                    if (prevBtn) {
+                        prevBtn.disabled = currentSlideIndex === 0;
+                    }
+                    if (nextBtn) {
+                        nextBtn.disabled = currentSlideIndex >= totalSlides - 1;
+                    }
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        if (currentSlideIndex < totalSlides - 1) {
+                            currentSlideIndex++;
+                            updateSlideshow();
+                        }
+                    });
+                }
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        if (currentSlideIndex > 0) {
+                            currentSlideIndex--;
+                            updateSlideshow();
+                        }
+                    });
+                }
+                updateSlideshow();
+            });
+        });
+    </script>
+</body>
+</html>
